@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#s2{
+  background-color:  #004e96;
+  position: absolute;
+  height: 100%;
+}
+
+.side,.sidex{
+  width: 100px;
+  position: relative;
+  color: white;
+}
+.side:hover,.act{
+  color: #004e96;
+  background-color:  white;
+}
