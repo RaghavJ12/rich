@@ -15,25 +15,25 @@ export default function Dashside() {
         return (
             <>
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-                <aside class="card has-text-centered" id="s2">
-                    <div class="sidex py-4"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
+                <div class="card has-text-centered" id="s2">
+                    <div class="sidex py-5"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
                     <Link href="./inbox">
                         <a>
-                            <div class="act py-4"><i class="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
+                            <div class="act py-5"><i class="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
                     <Link href="./friends">
                         <a>
-                            <div class="side py-4"><i class="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
+                            <div class="side py-5"><i class="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
                     <Link href="./analytics">
                         <a>
-                            <div class="side py-4"><i class="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
+                            <div class="side py-5"><i class="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div class="side py-4"><i class="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
-                </aside>
+                    <div class="us py-5"><i class="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
+                </div>
             </>
         )
     }
@@ -41,25 +41,25 @@ export default function Dashside() {
         return (
             <>
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-                <aside class="card has-text-centered" id="s2">
-                    <div class="sidex py-4"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
+                <div class="card has-text-centered" id="s2">
+                    <div class="sidex py-5"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
                     <Link href="./inbox">
                         <a>
-                            <div class="side py-4"><i class="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
+                            <div class="side py-5"><i class="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
                     <Link href="./friends">
                         <a>
-                            <div class="act py-4"><i class="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
+                            <div class="act py-5"><i class="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
                     <Link href="./analytics">
                         <a>
-                            <div class="side py-4"><i class="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
+                            <div class="side py-5"><i class="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div class="side py-4"><i class="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
-                </aside>
+                    <div class="side py-5"><i class="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
+                </div>
             </>
         )
     }
@@ -67,25 +67,25 @@ export default function Dashside() {
         return (
             <>
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-                <aside class="card has-text-centered" id="s2">
-                    <div class="sidex py-4"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
+                <div class="card has-text-centered" id="s2">
+                    <div class="sidex py-5"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
                     <Link href="./inbox">
                         <a>
-                            <div class="side py-4"><i class="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
+                            <div class="side py-5"><i class="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
                     <Link href="./friends">
                         <a>
-                            <div class="side py-4"><i class="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
+                            <div class="side py-5"><i class="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
                     <Link href="./analytics">
                         <a>
-                            <div class="act py-4"><i class="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
+                            <div class="act py-5"><i class="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div class="side py-4"><i class="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
-                </aside>
+                    <div class="side py-5"><i class="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
+                </div>
             </>
         )
     }

@@ -21,12 +21,27 @@ a {
   height: 100%;
 }
 
-.side,.sidex{
-  width: 100px;
+.side,.sidex,.us{
+  width: 90px;
   position: relative;
   color: white;
 }
 .side:hover,.act{
   color: #004e96;
   background-color:  white;
+}
+.us{
+  top:40%;
+}
+
+.cbb{
+  border-bottom: 1px solid #D3D3D3;
+  box-shadow: none;
+  display: flex;
+}
+
+.cbt{
+  border-top: 1px solid #D3D3D3;
+  box-shadow: none;
+  display: flex;
 }
