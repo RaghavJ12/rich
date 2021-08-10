@@ -4,7 +4,7 @@ import Dashside from '../components/dashside';
 export default function Dashboard() {
     return (
         <>
-            <div classNameName="columns">
+            <div className="columns">
                 <div className="column is-1">
                     <Dashside />
                 </div>

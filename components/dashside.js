@@ -1,6 +1,9 @@
 import React from 'react';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
+import Image from 'next/image'
+import user3pic from '../public/images/user3.jpeg'
+import logo from '../public/images/rich_logo.png'
 
 export default function Dashside() {
     const router = useRouter()
@@ -16,7 +19,7 @@ export default function Dashside() {
             <>
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
                 <div className="card has-text-centered" id="s2">
-                    <div className="sidex py-4"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
+                    <div className="sidex py-4"><Image src={logo} height={45} width={50} /></div>
                     <Link href="./inbox">
                         <a>
                             <div className="act py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
@@ -32,7 +35,7 @@ export default function Dashside() {
                             <div className="side py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div className="us py-5"><img src='./images/user3.jpeg' className="cp ml-2" /><i className="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
+                    <div className="us py-5"><Image src={user3pic} className="cp" alt="user3" width={50} height={50}/><i className="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
                 </div>
             </>
         )
@@ -42,7 +45,7 @@ export default function Dashside() {
             <>
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
                 <div className="card has-text-centered" id="s2">
-                    <div className="sidex py-5"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
+                    <div className="sidex py-4"><Image src={logo} height={45} width={50} /></div>
                     <Link href="./inbox">
                         <a>
                             <div className="side py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
@@ -58,7 +61,7 @@ export default function Dashside() {
                             <div className="side py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div className="side py-5"><i className="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
+                    <div className="us py-5"><Image src={user3pic} className="cp" alt="user3" width={50} height={50}/><i className="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
                 </div>
             </>
         )
@@ -68,7 +71,7 @@ export default function Dashside() {
             <>
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
                 <div className="card has-text-centered" id="s2">
-                    <div className="sidex py-5"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
+                    <div className="sidex py-4"><Image src={logo} height={45} width={50} /></div>
                     <Link href="./inbox">
                         <a>
                             <div className="side py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
@@ -84,7 +87,7 @@ export default function Dashside() {
                             <div className="act py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div className="side py-5"><i className="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
+                    <div className="us py-5"><Image src={user3pic} className="cp" alt="user3" width={50} height={50}/><i className="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
                 </div>
             </>
         )

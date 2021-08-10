@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'
+import user1pic from '../public/images/user1.png'
 
 import Dashside from '../components/dashside';
-import { BorderAll } from '@material-ui/icons';
 
 const data = [
     {
@@ -32,12 +33,12 @@ const data = [
 ]
 
 export default function Dashboard() {
-    const [user, setuser] = useState(1);
+    // const [user, setuser] = useState(1);
 
-    function getuser(n) {
-        setuser(n);
-    }
-    console.log(user);
+    // function getuser(n) {
+    //     setuser(n);
+    // }
+    // console.log(user);
 
     // useEffect(() => {
     //     s
@@ -46,11 +47,11 @@ export default function Dashboard() {
     return (
         <>
             <Dashside />
-            <div classNameName="columns is-gapless is-mobile" style={{ marginLeft: '82px' }}>
+            <div className="columns is-gapless is-mobile" style={{ marginLeft: '82px' }}>
                 <div className="column is-3">
                     <div className="card" style={{ height: '100vh' }}>
                         <div className="card p-3" style={{ borderRadius: '0' }}>
-                            <div classNameName="columns is-gapless mx-2">
+                            <div className="columns is-gapless mx-2">
                                 <div className="column is-1" style={{ color: '#C0C0C0' }}>
                                     <i className=" mt-3 fas fa-align-left icon"></i>
                                 </div>
@@ -108,7 +109,7 @@ export default function Dashboard() {
                     <div className="card cbb pb-5">
                         <div className="columns pt-4 is-multiline">
                             <div className="column is-3 is-offset-5">
-                                <img src='./images/user1.jfif' className="dp"></img>
+                                <Image src={user1pic} class="dp" />
                             </div>
                             <div className="column is-5 is-offset-5">
                                 <p className="is-size-5 has-text-weight-bold" style={{ marginTop: '-20px' }}>Amit RG</p>

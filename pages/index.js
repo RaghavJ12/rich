@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import main from '../public/images/rich_inv_logo.png'
 
 export default function Home() {
   const router = useRouter()
@@ -19,7 +20,7 @@ export default function Home() {
       <br />
       <div className="columns">
         <div className="column is-2 is-offset-1">
-          <div><img src="/images/rich_inv_logo.png" style={{ height: '200px' }} /></div>
+          <Image src={main} height={500} />
         </div>
         <div className="column is-4 is-offset-2">
           <p className="is-size-1 has-text-centered ht">Welcome to FB Helper</p>
