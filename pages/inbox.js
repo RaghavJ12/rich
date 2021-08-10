@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
 import user1pic from '../public/images/user1.png'
-
+import user2pic from '../public/images/user2.jpg'
 import Dashside from '../components/dashside';
 
 const data = [
@@ -14,7 +14,7 @@ const data = [
         time: '10m',
         short: 'Awesome Product',
         msg: 'Hey there! I probably did one of the bes...',
-        pic: './images/user1',
+        pic: user1pic,
         status: 'Online',
         email: 'amit@richpanel.com'
     },
@@ -26,7 +26,7 @@ const data = [
         time: '10m',
         short: 'Available in store?',
         msg: 'Hi do you have any T-Shirt available in st...',
-        pic: './images/user2',
+        pic: user2pic,
         status: 'Offline',
         email: 'hiten@richpanel.com'
     }
@@ -109,7 +109,7 @@ export default function Dashboard() {
                     <div className="card cbb pb-5">
                         <div className="columns pt-4 is-multiline">
                             <div className="column is-3 is-offset-5">
-                                <Image src={user1pic} class="dp" />
+                                <Image src={u2.pic} class="dp" />
                             </div>
                             <div className="column is-5 is-offset-5">
                                 <p className="is-size-5 has-text-weight-bold" style={{ marginTop: '-20px' }}>{u2.fname} {u2.lname}</p>
