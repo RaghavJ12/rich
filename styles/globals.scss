@@ -1,5 +1,6 @@
 html,
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -19,10 +20,11 @@ a {
   background-color:  #004e96;
   position: absolute;
   height: 100%;
+  border-radius: 0%;
 }
 
 .side,.sidex,.us{
-  width: 90px;
+  width: 82px;
   position: relative;
   color: white;
 }
@@ -38,10 +40,48 @@ a {
   border-bottom: 1px solid #D3D3D3;
   box-shadow: none;
   display: flex;
+  border-radius: 0;
 }
 
 .cbt{
   border-top: 1px solid #D3D3D3;
   box-shadow: none;
   display: flex;
+  border-radius: 0;
+}
+
+.redo{
+  border: none;
+  background: none;
+  :hover{
+    cursor: pointer;
+  }
+}
+
+.card{
+  box-shadow: none;
+}
+
+.r1:hover{
+  background-color: rgb(230, 225, 225);
+  border-radius: 50%;
+}
+
+.mid{
+  border-radius: 0;
+  border-left: 1px solid #D3D3D3;
+  border-right: 1px solid #D3D3D3;
+}
+
+#sel{
+  border-radius: 0;
+  box-shadow: none;
+  :hover{
+    cursor: pointer;
+    background-color: rgb(212, 209, 209);
+  }
+}
+
+.dp{
+  border-radius: 50%;
 }

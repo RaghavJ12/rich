@@ -16,7 +16,7 @@ export default function Dashside() {
             <>
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
                 <div class="card has-text-centered" id="s2">
-                    <div class="sidex py-5"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
+                    <div class="sidex py-4"><img src="/images/rich_logo.png" style={{ height: '40px' }} /></div>
                     <Link href="./inbox">
                         <a>
                             <div class="act py-5"><i class="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
