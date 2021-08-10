@@ -15,7 +15,7 @@ const data = [
         short: 'Awesome Product',
         msg: 'Hey there! I probably did one of the bes...',
         pic: './images/user1',
-        status: 'online',
+        status: 'Online',
         email: 'amit@richpanel.com'
     },
     {
@@ -27,22 +27,25 @@ const data = [
         short: 'Available in store?',
         msg: 'Hi do you have any T-Shirt available in st...',
         pic: './images/user2',
-        status: 'offline',
+        status: 'Offline',
         email: 'hiten@richpanel.com'
     }
 ]
 
 export default function Dashboard() {
-    // const [user, setuser] = useState(1);
+    const [user, setuser] = useState(data[0]);
+    const [u2,setu2]=useState(data[0]);
+    const [col,setcol]=useState('#8a8989');
 
-    // function getuser(n) {
-    //     setuser(n);
-    // }
-    // console.log(user);
-
-    // useEffect(() => {
-    //     s
-    // });
+    useEffect(() => {
+        setu2(user);
+        if(u2.status=='Online'){
+            setcol('green');
+        }
+        else{
+            setcol('#8a8989');
+        }
+    });
 
     return (
         <>
@@ -66,27 +69,24 @@ export default function Dashboard() {
                         <div className="columns is-gapless is-multiline card cbt is-fullwidth" style={{ borderRadius: '0' }}>
                             {data.map((n) => {
                                 return (
-                                    <a key={n.id}>
-                                        {/* <a> */}
-                                        <div id="sel">
-                                            <div className="card py-3 px-5 cbb column is-full mr-2" style={{ borderRadius: 0 }}>
-                                                <div className="columns">
-                                                    <div className="column is-1">
-                                                        <input type="checkbox" />
-                                                    </div>
-                                                    <div className="column is-6">
-                                                        <p className="has-text-weight-bold">{n.fname} {n.lname}</p>
-                                                        <p className="has-text-weight-semibold">{n.type}</p>
-                                                    </div>
-                                                    <div className="column is-1 is-offset-3 has-text-weight-semibold">{n.time}</div>
+                                    <div id="sel" key={n.id} onClick={() => setuser(n)}>
+                                        <div className="card py-3 px-5 cbb column is-full mr-2" style={{ borderRadius: 0 }}>
+                                            <div className="columns">
+                                                <div className="column is-1">
+                                                    <input type="checkbox" />
                                                 </div>
-                                                <p style={{ marginTop: '-15px' }}>
-                                                    <p className="has-text-weight-semibold">{n.short}</p>
-                                                    <p className="pr-3" style={{ color: '#8a8989' }}>{n.msg}</p>
-                                                </p>
+                                                <div className="column is-6">
+                                                    <p className="has-text-weight-bold">{n.fname} {n.lname}</p>
+                                                    <p className="has-text-weight-semibold">{n.type}</p>
+                                                </div>
+                                                <div className="column is-1 is-offset-3 has-text-weight-semibold">{n.time}</div>
                                             </div>
+                                            <p style={{ marginTop: '-15px' }}>
+                                                <p className="has-text-weight-semibold">{n.short}</p>
+                                                <p className="pr-3" style={{ color: '#8a8989' }}>{n.msg}</p>
+                                            </p>
                                         </div>
-                                    </a>
+                                    </div>
                                 )
                             })}
                         </div>
@@ -95,7 +95,7 @@ export default function Dashboard() {
                 <div className="column is-6">
                     <div className="card mid" style={{ height: '100vh' }}>
                         <div className="card p-4 cbb" style={{ borderRadius: '0' }}>
-                            <p className="is-size-4 has-text-weight-bold mx-2">Amit RG</p>
+                            <p className="is-size-4 has-text-weight-bold mx-2">{u2.fname} {u2.lname}</p>
                         </div>
                         <div style={{ height: '80vh' }}></div>
                         <div className="columns">
@@ -112,10 +112,10 @@ export default function Dashboard() {
                                 <Image src={user1pic} class="dp" />
                             </div>
                             <div className="column is-5 is-offset-5">
-                                <p className="is-size-5 has-text-weight-bold" style={{ marginTop: '-20px' }}>Amit RG</p>
+                                <p className="is-size-5 has-text-weight-bold" style={{ marginTop: '-20px' }}>{u2.fname} {u2.lname}</p>
                             </div>
                             <div className="column is-5 is-offset-5">
-                                <p className="is-size-6 ml-2" style={{ marginTop: '-20px', color: '#8a8989' }}><i className="fas fa-circle icon is-small pr-2"></i>Offline</p>
+                                <p className="is-size-6 ml-2" style={{ marginTop: '-20px', color: col }}><i className="fas fa-circle icon is-small pr-2"></i>{u2.status}</p>
                             </div>
                         </div>
                         <div className="columns is-mobile">
@@ -131,11 +131,11 @@ export default function Dashboard() {
                         <p className="has-text-weight-semibold is-size-5 mb-3">Customer Details</p>
                         <div className="columns is-mobile is-multiline is-size-6">
                             <div className="column is-4 tg">Email</div>
-                            <div className="column is-8 has-text-right"><p className="has-text-weight-semibold">amit@richpanel.com</p></div>
+                            <div className="column is-8 has-text-right"><p className="has-text-weight-semibold">{u2.email}</p></div>
                             <div className="column is-4 tg">First Name</div>
-                            <div className="column is-8 has-text-right"><p className="has-text-weight-semibold">Amit</p></div>
+                            <div className="column is-8 has-text-right"><p className="has-text-weight-semibold">{u2.fname}</p></div>
                             <div className="column is-4 tg">Last Name</div>
-                            <div className="column is-8 has-text-right"><p className="has-text-weight-semibold">RG</p></div>
+                            <div className="column is-8 has-text-right"><p className="has-text-weight-semibold">{u2.lname}</p></div>
                         </div>
                         <a className="vd">View more details</a>
                     </div>
