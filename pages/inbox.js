@@ -64,7 +64,7 @@ export default function Dashboard() {
                             </div>
                         </div>
                         <div className="columns is-gapless is-multiline card cbt is-fullwidth" style={{ borderRadius: '0' }}>
-                            {data.map((n) => {
+                            {data.map((n,key) => {
                                 return (
                                     <a>
                                         {/* <a> */}
