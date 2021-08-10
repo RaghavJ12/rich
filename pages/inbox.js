@@ -66,10 +66,10 @@ export default function Dashboard() {
                         <div className="columns is-gapless is-multiline card cbt is-fullwidth" style={{ borderRadius: '0' }}>
                             {data.map((n) => {
                                 return (
-                                    <a>
+                                    <a key={n.id}>
                                         {/* <a> */}
                                         <div id="sel">
-                                            <div className="card py-3 px-5 cbb column is-full mr-2" style={{ borderRadius: 0 }}  key={n.id}>
+                                            <div className="card py-3 px-5 cbb column is-full mr-2" style={{ borderRadius: 0 }}>
                                                 <div className="columns">
                                                     <div className="column is-1">
                                                         <input type="checkbox" />
