@@ -69,20 +69,20 @@ export default function Dashboard() {
                                     <a>
                                         {/* <a> */}
                                         <div id="sel">
-                                            <div className="card py-3 px-5 cbb column is-full mr-2" style={{ borderRadius: 0 }}>
+                                            <div className="card py-3 px-5 cbb column is-full mr-2" style={{ borderRadius: 0 }}  key={n.id}>
                                                 <div className="columns">
                                                     <div className="column is-1">
                                                         <input type="checkbox" />
                                                     </div>
                                                     <div className="column is-6">
-                                                        <p className="has-text-weight-bold" key={n.id}>{n.fname} {n.lname}</p>
-                                                        <p className="has-text-weight-semibold" key={n.id}>{n.type}</p>
+                                                        <p className="has-text-weight-bold">{n.fname} {n.lname}</p>
+                                                        <p className="has-text-weight-semibold">{n.type}</p>
                                                     </div>
-                                                    <div className="column is-1 is-offset-3 has-text-weight-semibold" key={n.id}>{n.time}</div>
+                                                    <div className="column is-1 is-offset-3 has-text-weight-semibold">{n.time}</div>
                                                 </div>
                                                 <p style={{ marginTop: '-15px' }}>
-                                                    <p className="has-text-weight-semibold" key={n.id}>{n.short}</p>
-                                                    <p className="pr-3" style={{ color: '#8a8989' }} key={n.id}>{n.msg}</p>
+                                                    <p className="has-text-weight-semibold">{n.short}</p>
+                                                    <p className="pr-3" style={{ color: '#8a8989' }}>{n.msg}</p>
                                                 </p>
                                             </div>
                                         </div>
