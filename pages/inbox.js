@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import Dashside from '../components/dashside';
+import { BorderAll } from '@material-ui/icons';
 
 const data = [
     {
@@ -64,8 +65,8 @@ export default function Dashboard() {
                         <div class="columns is-gapless is-multiline card cbt is-fullwidth" style={{ borderRadius: '0' }}>
                             {data.map((n) => {
                                 return (
-                                    // <a onClick={getuser(n.id)}>
                                     <a>
+                                        {/* <a> */}
                                         <div id="sel">
                                             <div class="card py-3 px-5 cbb column is-full mr-2" style={{ borderRadius: 0 }}>
                                                 <div class="columns">
@@ -95,16 +96,47 @@ export default function Dashboard() {
                         <div class="card p-4 cbb" style={{ borderRadius: '0' }}>
                             <p class="is-size-4 has-text-weight-bold mx-2">Amit RG</p>
                         </div>
+                        <div style={{ height: '80vh' }}></div>
+                        <div class="columns">
+                            <div class="column is-11">
+                                <input id="name" class="input is-info mx-5" type="text" required placeholder="Message Hiten Saxena" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="column is-3">
-                    <div class="card">
-                        <br />
-                        <div class="columns mt-2">
+                    <div class="card cbb pb-5">
+                        <div class="columns pt-4 is-multiline">
                             <div class="column is-3 is-offset-5">
                                 <img src='./images/user1.jfif' class="dp"></img>
                             </div>
+                            <div class="column is-5 is-offset-5">
+                                <p class="is-size-5 has-text-weight-bold" style={{ marginTop: '-20px' }}>Amit RG</p>
+                            </div>
+                            <div class="column is-5 is-offset-5">
+                                <p class="is-size-6 ml-2" style={{ marginTop: '-20px', color: '#8a8989' }}><i class="fas fa-circle icon is-small pr-2"></i>Offline</p>
+                            </div>
                         </div>
+                        <div class="columns is-mobile">
+                            <div class="column is-3 is-offset-3">
+                                <button class="button"><i class="fas fa-phone fa-rotate-180 mr-2"></i>Call</button>
+                            </div>
+                            <div class="column is-3">
+                                <button class="button"><i class="fas fa-user-circle icon mr-2" aria-hidden="true"></i>Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-4 p-4" style={{ border: '1px solid #D3D3D3' }}>
+                        <p class="has-text-weight-semibold is-size-5 mb-3">Customer Details</p>
+                        <div class="columns is-mobile is-multiline is-size-6">
+                            <div class="column is-4 tg">Email</div>
+                            <div class="column is-8 has-text-right"><p class="has-text-weight-semibold">amit@richpanel.com</p></div>
+                            <div class="column is-4 tg">First Name</div>
+                            <div class="column is-8 has-text-right"><p class="has-text-weight-semibold">Amit</p></div>
+                            <div class="column is-4 tg">Last Name</div>
+                            <div class="column is-8 has-text-right"><p class="has-text-weight-semibold">RG</p></div>
+                        </div>
+                        <a class="vd">View more details</a>
                     </div>
                 </div>
             </div>

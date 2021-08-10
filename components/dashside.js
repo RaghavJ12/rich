@@ -32,7 +32,7 @@ export default function Dashside() {
                             <div class="side py-5"><i class="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div class="us py-5"><i class="fas fa-user-circle icon is-medium" aria-hidden="true"></i></div>
+                    <div class="us py-5"><img src='./images/user3.jpeg' class="cp ml-2" /><i class="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
                 </div>
             </>
         )
