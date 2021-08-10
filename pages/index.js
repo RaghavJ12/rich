@@ -14,27 +14,27 @@ export default function Home() {
     }
   }
   return (
-    <div class="wel" style={{ backgroundColor: '#004e96' }}>
+    <div className="wel" style={{ backgroundColor: '#004e96' }}>
       <br />
       <br />
-      <div class="columns">
-        <div class="column is-2 is-offset-1">
+      <div className="columns">
+        <div className="column is-2 is-offset-1">
           <div><img src="/images/rich_inv_logo.png" style={{ height: '200px' }} /></div>
         </div>
-        <div class="column is-4 is-offset-2">
-          <p class="is-size-1 has-text-centered ht">Welcome to FB Helper</p>
+        <div className="column is-4 is-offset-2">
+          <p className="is-size-1 has-text-centered ht">Welcome to FB Helper</p>
           <br />
           <br />
-          <div class="box">
+          <div className="box">
             <form onSubmit={authenticate}>
-              <p class="is-size-5 has-text-weight-semibold">Enter Email:</p>
+              <p className="is-size-5 has-text-weight-semibold">Enter Email:</p>
               <br />
-              <input id="name" class="input is-primary" type="text" autoComplete="email" required placeholder="Enter Email" />
+              <input id="name" className="input is-primary" type="text" autoComplete="email" required placeholder="Enter Email" />
               <br />
               <br />
-              <div class="columns has-text-right">
-                <div class="column is-4 is-offset-8">
-                  <button class="button is-rounded" id="b1" type="submit">Submit</button>
+              <div className="columns has-text-right">
+                <div className="column is-4 is-offset-8">
+                  <button className="button is-rounded" id="b1" type="submit">Submit</button>
                 </div>
               </div>
             </form>
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </div>
       {/* <Link href="./inbox"><a>
-        <button class="is-size-5">Accepted</button>
+        <button className="is-size-5">Accepted</button>
       </a></Link> */}
     </div>
   )
