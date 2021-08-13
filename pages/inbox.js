@@ -4,6 +4,9 @@ import Image from 'next/image'
 import user1pic from '../public/images/user1.png'
 import user2pic from '../public/images/user2.jpg'
 import Dashside from '../components/dashside';
+import getid from './index';
+
+console.log(getid);
 
 const data = [
     {
@@ -109,10 +112,10 @@ export default function Dashboard() {
                     <div className="card cbb pb-5">
                         <div className="columns pt-4 is-multiline">
                             <div className="column is-3 is-offset-5">
-                                <Image src={u2.pic} class="dp" />
+                                <Image src={u2.pic} className="dp" />
                             </div>
-                            <div className="column is-5 is-offset-5">
-                                <p className="is-size-5 has-text-weight-bold" style={{ marginTop: '-20px' }}>{u2.fname} {u2.lname}</p>
+                            <div className="column is-5 is-offset-4">
+                                <p className="is-size-5 has-text-weight-bold has-text-centered" style={{ marginTop: '-20px' }}>{u2.fname} {u2.lname}</p>
                             </div>
                             <div className="column is-5 is-offset-5">
                                 <p className="is-size-6 ml-2" style={{ marginTop: '-20px', color: col }}><i className="fas fa-circle icon is-small pr-2"></i>{u2.status}</p>
