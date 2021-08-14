@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react';
+import { signin, signIn } from 'next-auth/client';
 import Link from 'next/link';
 import Image from 'next/image'
 
@@ -35,7 +36,7 @@ export default function Login() {
             <br />
             <br />
             <div className="box">
-              <form>
+              {/* <form>
               <p className="is-size-5 has-text-weight-semibold">Enter Name: <span style={{color: "red"}}>*</span></p>
                 <br />
                 <input id="name" className="input is-primary" type="text" autoComplete="name" required placeholder="Enter Name" />
@@ -56,7 +57,8 @@ export default function Login() {
                     <button className="button is-rounded" id="b1" type="submit">Submit</button>
                   </div>
                 </div>
-              </form>
+              </form> */}
+              <button className="button is-rounded" id="b1" onClick={signin}>Submit</button>
             </div>
           </div>
         </div>
