@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import Image from 'next/image'
-import user3pic from '../public/images/user3.jpeg'
 import logo from '../public/images/rich_logo.png'
+import { useSession, signOut } from 'next-auth/client';
+import { Button, Modal, ModalBody, ModalFooter } from "reactstrap";
 
 export default function Dashside() {
     const router = useRouter()
     const l = router.pathname;
 
+    const [sess] = useSession();
 
-    // const l1 = "/inbox";
     const l2 = "/friends";
     const l3 = "/analytics";
+
+    const MyImage = sess.user.image;
+    const [modalOpen, setModalOpen] = useState(false);
 
     if (l.startsWith(l2)) {
         return (
@@ -20,7 +24,7 @@ export default function Dashside() {
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
                 <div className="card has-text-centered" id="s2">
                     <div className="sidex py-4"><Image src={logo} height={45} width={50} /></div>
-                    <Link href="./inbox">
+                    <Link href="./">
                         <a>
                             <div className="side py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
                         </a>
@@ -35,7 +39,15 @@ export default function Dashside() {
                             <div className="side py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div className="us py-5"><Image src={user3pic} className="cp" alt="user3" width={50} height={50}/><i className="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
+                    <div className="us py-5">
+                        <Image
+                            src={MyImage}
+                            onClick={Mod}
+                            className="cp"
+                            alt="user3"
+                            width={50}
+                            height={50} />
+                    </div>
                 </div>
             </>
         )
@@ -46,7 +58,7 @@ export default function Dashside() {
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
                 <div className="card has-text-centered" id="s2">
                     <div className="sidex py-4"><Image src={logo} height={45} width={50} /></div>
-                    <Link href="./inbox">
+                    <Link href="./">
                         <a>
                             <div className="side py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
                         </a>
@@ -61,7 +73,15 @@ export default function Dashside() {
                             <div className="act py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div className="us py-5"><Image src={user3pic} className="cp" alt="user3" width={50} height={50}/><i className="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
+                    <div className="us py-5">
+                        <Image
+                            src={MyImage}
+                            onClick={Mod}
+                            className="cp"
+                            alt="user3"
+                            width={50}
+                            height={50} />
+                    </div>
                 </div>
             </>
         )
@@ -72,7 +92,7 @@ export default function Dashside() {
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
                 <div className="card has-text-centered" id="s2">
                     <div className="sidex py-4"><Image src={logo} height={45} width={50} /></div>
-                    <Link href="./inbox">
+                    <Link href="./">
                         <a>
                             <div className="act py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
                         </a>
@@ -87,10 +107,45 @@ export default function Dashside() {
                             <div className="side py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
                         </a>
                     </Link>
-                    <div className="us py-5"><Image src={user3pic} className="cp" alt="user3" width={50} height={50}/><i className="fas fa-circle icon ind pt-1" aria-hidden="true"></i></div>
+                    <div className="us py-5">
+                        <Image
+                            src={MyImage}
+                            onClick={() => setModalOpen(!modalOpen)}
+                            className="cp"
+                            alt="user3"
+                            width={50}
+                            height={50} />
+                    </div>
+                    <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
+                        <div className=" modal-header">
+                            <h5 className=" modal-title" id="exampleModalLabel">
+                                Modal title
+                            </h5>
+                            <button
+                                aria-label="Close"
+                                className=" close"
+                                type="button"
+                                onClick={() => setModalOpen(!modalOpen)}
+                            >
+                                <span aria-hidden={true}>×</span>
+                            </button>
+                        </div>
+                        <ModalBody>You want to Log Out?</ModalBody>
+                        <ModalFooter>
+                            <Button
+                                color="secondary"
+                                type="button"
+                                onClick={() => setModalOpen(!modalOpen)}
+                            >
+                                No
+                            </Button>
+                            <Button color="primary" type="button" onClick={signOut}>
+                                Yes
+                            </Button>
+                        </ModalFooter>
+                    </Modal>
                 </div>
             </>
         )
     }
-    
 }
