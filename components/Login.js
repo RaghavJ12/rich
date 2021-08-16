@@ -1,68 +1,29 @@
-import { useRouter } from 'next/router'
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { signin, signIn } from 'next-auth/client';
-import Link from 'next/link';
+import logo from '../public/images/fb.jpg'
 import Image from 'next/image'
 
 export default function Login() {
-    
-    // const [exp,setexp]=useState(null);
-    // const router = useRouter()
-    // const authenticate = event => {
-    //   const n = event.target.name.value;
-    //   const e = event.target.email.value;
-    //   const p= event.target.ph.value;
-    //   const obj={
-    //     uname: n,
-    //     email: e,
-    //     phone: p
-    //   };
-    //   setexp(obj);
-    //   router.push('/inbox')
-    //   event.preventDefault()
-    // }
-  
-    // console.log(exp);
-  
-    // const [ session, loading ] = useSession()
-  
-    return (
-      <div className="wel" style={{ backgroundColor: '#004e96' }}>
-        <br />
-        <br />
-        <div className="columns">
-          <div className="column is-4 is-offset-4">
-            <p className="is-size-1 has-text-centered ht">Welcome to FB Helper</p>
-            <br />
-            <br />
-            <div className="box">
-              {/* <form>
-              <p className="is-size-5 has-text-weight-semibold">Enter Name: <span style={{color: "red"}}>*</span></p>
-                <br />
-                <input id="name" className="input is-primary" type="text" autoComplete="name" required placeholder="Enter Name" />
-                <br />
-                <br />
-                <p className="is-size-5 has-text-weight-semibold">Enter Email: <span style={{color: "red"}}>*</span></p>
-                <br />
-                <input id="email" className="input is-primary" type="text" autoComplete="email" required placeholder="Enter Email" />
-                <br />
-                <br/>
-                <p className="is-size-5 has-text-weight-semibold">Enter Phone: </p>
-                <br />
-                <input id="ph" className="input is-primary" type="text" autoComplete="phone" placeholder="Enter Phone" />
-                <br />
-                <br />
-                <div className="columns has-text-right">
-                  <div className="column is-4 is-offset-8">
-                    <button className="button is-rounded" id="b1" type="submit">Submit</button>
-                  </div>
+
+  return (
+    <div className="wel" style={{ backgroundColor: '#004e96' }}>      
+      <div className="columns" style={{marginTop: '20vh'}}>
+        <div className="column is-4 is-offset-4 has-text-centered">
+          <div className="card pb-5">
+            <div className="columns">
+              <div className="column is-4 is-offset-4">
+                <div className="fbl">
+                  <Image src={logo} width={100} height={100} class="log" />
                 </div>
-              </form> */}
-              <button className="button is-rounded" id="b1" onClick={signin}>Submit</button>
+              </div>
             </div>
+            <p className="is-size-2 has-text-centered" style={{ color: '#004e96' }}>Welcome to FB Helper</p>
+            <br />
+            <br />
+            <button className="button is-rounded has-text-weight-semibold is-large" id="b1" onClick={signin}>Login using Facebook</button>
           </div>
         </div>
       </div>
-    )
-  }
-  
+    </div>
+  )
+}
