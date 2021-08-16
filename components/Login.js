@@ -13,7 +13,7 @@ export default function Login() {
             <div className="columns">
               <div className="column is-4 is-offset-4">
                 <div className="fbl">
-                  <Image src={logo} width={100} height={100} class="log" />
+                  <Image src={logo} width={100} height={100} className="log" />
                 </div>
               </div>
             </div>
