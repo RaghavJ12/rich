@@ -49,7 +49,7 @@ export default function Home({ session }) {
       setcol('#8a8989');
     }
   });
-
+  
   if (!session)
     return <Login />;
 
