@@ -6,26 +6,72 @@ export default function LayoutDash() {
 
     const router = useRouter()
     const l = router.pathname;
-    // const l2 = "/friends";
-    // const l3 = "/analytics";
+    const l1 = "/inbox";
+    const l2 = "/friends";
+    const l3 = "/analytics";
 
-    return (
-        <>
-            <Link href="./">
-                <a>
-                    <div className="act py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
-                </a>
-            </Link>
-            <Link href="./#">
-                <a>
-                    <div className="side py-5"><i className="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
-                </a>
-            </Link>
-            <Link href="./#">
-                <a>
-                    <div className="side py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
-                </a>
-            </Link>
-        </>
-    )
+
+    if (l.startsWith(l1)) {
+        return (
+            <>
+                <Link href="./inbox">
+                    <a>
+                        <div className="act py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+                <Link href="./friends">
+                    <a>
+                        <div className="side py-5"><i className="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+                <Link href="./analytics">
+                    <a>
+                        <div className="side py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+            </>
+        )
+    }
+    if (l.startsWith(l2)) {
+        return (
+            <>
+                <Link href="./inbox">
+                    <a>
+                        <div className="side py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+                <Link href="./friends">
+                    <a>
+                        <div className="act py-5"><i className="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+                <Link href="./analytics">
+                    <a>
+                        <div className="side py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+            </>
+        )
+    }
+    if (l.startsWith(l3)) {
+        return (
+            <>
+                <Link href="./inbox">
+                    <a>
+                        <div className="side py-5"><i className="fa fa-inbox icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+                <Link href="./friends">
+                    <a>
+                        <div className="side py-5"><i className="fa fa-user-friends icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+                <Link href="./analytics">
+                    <a>
+                        <div className="act py-5"><i className="fa fa-chart-line icon is-medium" aria-hidden="true"></i></div>
+                    </a>
+                </Link>
+            </>
+        )
+    }
 }
